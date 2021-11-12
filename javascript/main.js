@@ -21,7 +21,6 @@
  
  /**
   *  get data from API
-  * var url = "http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC";
   */
  function ajaxCall(inputValue) {
      var url = "https://api.giphy.com/v1/gifs/search?q="+ inputValue +"&api_key=dc6zaTOxFJmzC";
@@ -62,8 +61,7 @@
          gifyContainer[0].innerHTML += "<img src=\""+ url +"\" class =\"container-image\">";
      });
  
-     // var gifyContainer = document.getElementsByClassName('gify-container');
-     // gifyContainer[0].innerHTML = "<img src=\""+ gifUrl +"\" >";
+
  }
  
  
