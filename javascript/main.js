@@ -21,17 +21,16 @@
  
  /**
   *  get data from API
+  * var url = "http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC";
   */
  function ajaxCall(inputValue) {
-     var url = "https://api.giphy.com/v1/gifs/search?q="+ inputValue +"&api_key=dc6zaTOxFJmzC";
+     var url = "https://api.giphy.com/v1/gifs/search?q="+ inputValue +"&api_key=dD28nf3EwpkZOq33QXvGMmrGMPBnF37N";
          // AJAX Request
          var GiphyAJAXCall = new XMLHttpRequest();
          GiphyAJAXCall.open( 'GET', url );
          GiphyAJAXCall.send();
          
-    GiphyAJAXCall.onreadystatechange = (e) => {
-        console.log("HTTPS PASSED!")
-    }
+  
  
          GiphyAJAXCall.addEventListener('load',function (e) {
              var giphyData = e.target.response;
@@ -61,7 +60,8 @@
          gifyContainer[0].innerHTML += "<img src=\""+ url +"\" class =\"container-image\">";
      });
  
-
+     // var gifyContainer = document.getElementsByClassName('gify-container');
+     // gifyContainer[0].innerHTML = "<img src=\""+ gifUrl +"\" >";
  }
  
  
